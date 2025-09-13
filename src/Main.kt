@@ -3,10 +3,9 @@ fun main() {
     val gestor = GestorPedido()
     val pedido = mutableListOf<Producto>()
 
-    // Mostrar catálogo
+
     gestor.mostrarCatalogo()
 
-    // Agregar productos al pedido
     pedido.add(ProductoPrincipal("Hamburguesa Clásica", 15, 8990, false))
     pedido.add(ProductoBebida("Coca Cola", "mediano", 1990, 5))
 
@@ -28,7 +27,7 @@ fun main() {
     println("Estado: $estado")
 
 
-    println("=== RESUMEN DEL PEDIDO ===")
+    println("RESUMEN DEL PEDIDO")
     pedido.forEach { println("${it.nombre} - ${it.precio}") }
     println("Subtotal: $subtotal")
     println("Descuento: $descuento")
