@@ -20,9 +20,10 @@ class GestorPedido {
 
             val detalleExtra = when (producto) {
                 is ProductoPrincipal -> if (producto.esPremium) "(Premium)" else ""
-                is ProductoBebida -> "(${producto.tamano.capitalize()})"
+                is ProductoBebida -> "(${producto.tamano.replaceFirstChar { it.uppercaseChar() }})"
                 else -> ""
             }
+
 
             println("$numero. $nombre $detalleExtra - $$precioFormateado")
         }
